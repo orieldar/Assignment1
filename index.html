@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript" src="js/index.js"></script>
 <head>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
- <div id="fb-root"></div>
- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=267774203601771&autoLogAppEvents=1"></script>
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href="css/emoji.css" rel="stylesheet">
 </head>
 <body>
+<div id="fb-root"></div>
 <div id="menu">
  <nav id="nav">
  <ul>
@@ -69,10 +69,21 @@
 
 <section id="spa" class="section">
  <h4>Q&A answers</h4>
+ <input type="text" name="Content" size="50" data-emojiable="true"><br><br>
 </section>
 
 <section id="contact" class="section">
  <h4>Contact Me</h4>
+ <form action="mailto:orieleldardar@gmail.com?subject=Hello%20Ori" method="post" enctype="text/plain">
+  Name:<br>
+  <input type="text" name="Name"><br>
+  E-mail:<br>
+  <input type="text" name="Email"><br>
+  Comment:<br>
+  <input type="text" name="Content" size="50" data-emojiable="true"><br><br>
+  <input type="submit" value="Send Me a mail">
+  <input type="reset" value="Reset">
+ </form>
 </section>
 
 
@@ -89,5 +100,12 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });
  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=267774203601771&autoLogAppEvents=1"></script>
+<script src="js/config.js"></script>
+<script src="js/util.js"></script>
+<script src="js/jquery.emojiarea.js"></script>
+<script src="js/emoji-picker.js"></script>
 </body>
 </html>
