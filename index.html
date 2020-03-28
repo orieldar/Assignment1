@@ -3,7 +3,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/main.css" />
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
- <link href="css/emoji.css" rel="stylesheet">
 </head>
 <body>
 <div id="fb-root"></div>
@@ -80,10 +79,22 @@
   E-mail:<br>
   <input type="text" name="Email"><br>
   Comment:<br>
-  <input type="text" name="Content" size="50" data-emojiable="true"><br><br>
+  <textarea id="CommentBox" name="Content" ></textarea><br><br>
+  <p>
+   Insert Emoji <br>
+   <span class="emoji">&#129409;</span>
+   <span class="emoji">&#128585;</span>
+   <span class="emoji">&#128540;</span>
+   <span class="emoji">&#128522;</span>
+   <span class="emoji">&#128517;</span>
+   <span class="emoji">&#128512;</span>
+   <span class="emoji">&#128077;</span>
+   <span class="emoji">&#11088;</span>
+  </p>
   <input type="submit" value="Send Me a mail">
   <input type="reset" value="Reset">
  </form>
+
 </section>
 
 
@@ -91,7 +102,7 @@
 $(function(){
   $("#nav a").click(function(e){
     e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
+    $('html,body').scrollTo(this.hash,this.hash);
   });
 });
 </script>
@@ -101,11 +112,16 @@ $(function(){
  });
  </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+  $(".emoji ").click(function(e){
+   $('#CommentBox').val($('#CommentBox').val()+e.target.innerHTML);
+  });
+ });
+</script>
+
+
 <script type="text/javascript" src="js/index.js"></script>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=267774203601771&autoLogAppEvents=1"></script>
-<script src="js/config.js"></script>
-<script src="js/util.js"></script>
-<script src="js/jquery.emojiarea.js"></script>
-<script src="js/emoji-picker.js"></script>
 </body>
 </html>

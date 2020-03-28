@@ -180,7 +180,19 @@ section p {
 	background: white;
 
 }
-/* QR */
+/* Contact */
+
+#contact span{
+	cursor: pointer;
+}
+
+#contact textarea{
+	width: 40em;
+	height: 6em;
+}
+
+
+
 
 
 /* Type */
